@@ -1,0 +1,7 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.DakonTheGame" parent="Theme.AppCompat.NoActionBar">
+        <!-- Status bar disabled. -->
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>
