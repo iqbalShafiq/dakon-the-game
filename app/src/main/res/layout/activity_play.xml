@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="48dp"
         android:layout_marginTop="33dp"
-        android:baselineAligned="false"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,13 +23,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
+            android:clipToPadding="false"
             tools:itemCount="1"
             tools:listitem="@layout/item_container" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/llContainerMarbleGoal2"
+    <View
+        android:id="@+id/containerMarbleGoal2"
         android:layout_width="102dp"
         android:layout_height="0dp"
         android:layout_marginVertical="19dp"
@@ -39,17 +39,7 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/llPlayer1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/llPlayer2">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvMarbleGoal2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            tools:itemCount="1"
-            tools:listitem="@layout/item_marble" />
-
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/llPlayer2" />
 
     <LinearLayout
         android:id="@+id/llPlayer1"
@@ -68,13 +58,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
+            android:clipToPadding="false"
             tools:itemCount="1"
             tools:listitem="@layout/item_container" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/llContainerMarbleGoal1"
+    <View
+        android:id="@+id/containerMarbleGoal1"
         android:layout_width="102dp"
         android:layout_height="0dp"
         android:layout_marginVertical="19dp"
@@ -83,16 +74,6 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/llPlayer1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/llPlayer2">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvMarbleGoal1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            tools:itemCount="1"
-            tools:listitem="@layout/item_marble" />
-
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/llPlayer2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
