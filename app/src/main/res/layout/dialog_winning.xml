@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvAiScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/red_primary"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="5 Lose" />
+
+    <Button
+        android:id="@+id/btnReplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/bg_button_64"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingHorizontal="55dp"
+        android:paddingVertical="11dp"
+        android:text="@string/replay"
+        android:textColor="@color/green_primary"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvAiScore"
+        app:layout_constraintStart_toStartOf="@+id/tvAiScore"
+        app:layout_constraintTop_toBottomOf="@+id/tvAiScore" />
+
+    <TextView
+        android:id="@+id/tvPlayerScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/green_primary"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnReplay"
+        tools:text="11 Win" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

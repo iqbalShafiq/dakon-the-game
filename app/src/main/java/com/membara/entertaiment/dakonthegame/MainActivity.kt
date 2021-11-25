@@ -27,5 +27,7 @@ class MainActivity : AppCompatActivity() {
             intent = Intent(this, HelpActivity::class.java)
             startActivity(intent)
         }
+
+
     }
 }
