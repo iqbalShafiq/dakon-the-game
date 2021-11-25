@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.membara.entertaiment.dakonthegame.databinding.ItemContainerBinding
 
 class ContainerAdapter(
-    private val containers: MutableList<Int>,
+    private var containers: MutableList<Int>,
     private val player: Int,
     private val context: Context,
     private val activity: PlayActivity
@@ -41,6 +41,7 @@ class ContainerAdapter(
     private fun containerOnClick(position: Int) {
         if (containers[position] != 0) {
             binding.llContainer.setOnClickListener {
+                activity.timer = -200
                 if (activity.playerTurn == player) {
                     activity.moveMarble(
                         containers[position],
@@ -50,6 +51,8 @@ class ContainerAdapter(
                     )
                 }
             }
+
+            checkView(position)
         }
     }
 

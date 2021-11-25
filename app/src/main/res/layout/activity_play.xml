@@ -11,7 +11,6 @@
         android:id="@+id/llPlayer2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="48dp"
         android:layout_marginTop="33dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,14 +21,15 @@
             android:id="@+id/rvPlayer2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:paddingStart="56dp"
+            android:paddingEnd="48dp"
             android:clipToPadding="false"
             tools:itemCount="1"
             tools:listitem="@layout/item_container" />
 
     </LinearLayout>
 
-    <View
+    <LinearLayout
         android:id="@+id/containerMarbleGoal2"
         android:layout_width="102dp"
         android:layout_height="0dp"
@@ -39,13 +39,24 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/llPlayer1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/llPlayer2" />
+        app:layout_constraintTop_toBottomOf="@+id/llPlayer2">
+
+        <TextView
+            android:id="@+id/tvGoalsPlayer2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:textColor="@color/dark_primary"
+            android:textSize="36sp"
+            tools:text="1" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/llPlayer1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="48dp"
         android:layout_marginBottom="33dp"
         android:baselineAligned="false"
         android:orientation="horizontal"
@@ -57,14 +68,17 @@
             android:id="@+id/rvPlayer1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
             android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingStart="48dp"
+            android:paddingEnd="56dp"
             tools:itemCount="1"
             tools:listitem="@layout/item_container" />
 
     </LinearLayout>
 
-    <View
+    <LinearLayout
         android:id="@+id/containerMarbleGoal1"
         android:layout_width="102dp"
         android:layout_height="0dp"
@@ -74,6 +88,31 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/llPlayer1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/llPlayer2" />
+        app:layout_constraintTop_toBottomOf="@+id/llPlayer2">
+
+        <TextView
+            android:id="@+id/tvGoalsPlayer1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:textColor="@color/dark_primary"
+            android:textSize="36sp"
+            tools:text="0" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPlayerTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/green_primary"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/containerMarbleGoal2"
+        app:layout_constraintStart_toStartOf="@id/containerMarbleGoal1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Player's Turn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
